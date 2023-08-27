@@ -1,0 +1,58 @@
+//
+//  OTPHandler.swift
+//  OTPUIKITAPP
+//
+//  Created by Nour Gweda on 21/08/2023.
+//
+
+import Foundation
+import Firebase
+
+extension OTPMainView {
+    @MainActor
+    class OTPHandler: ObservableObject {
+        @Published var otpCode: String = ""
+        @Published var verificationCode: String = ""
+        @Published var errorMsg: String = ""
+        @Published var showAlert: Bool = false
+        @Published var isLoading: Bool = false
+
+        func sendOTP(mobileNumber: String) async {
+            do {
+                isLoading = true
+                let result = try await PhoneAuthProvider.provider().verifyPhoneNumber("+\(mobileNumber)", uiDelegate: nil)
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    self.verificationCode = result
+                    Task {
+                        await self.verifyOTP()
+                    }
+                }
+            } catch {
+                handleError(error: error.localizedDescription)
+            }
+        }
+
+        func handleError(error: String) {
+            DispatchQueue.main.async {
+                self.isLoading = false
+                self.errorMsg = error
+                self.showAlert.toggle()
+            }
+        }
+
+        func verifyOTP() async {
+            do {
+                self.isLoading = true
+                let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationCode, verificationCode: otpCode)
+                let _ = try await Auth.auth().signIn(with: credential)
+                debugPrint(otpCode, "🐙")
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                }
+            } catch {
+                handleError(error: error.localizedDescription)
+            }
+        }
+    }
+}

@@ -15,9 +15,9 @@ public struct CustomStyle {
     var borderColor: Color = .clear
     var width: CGFloat = 50
     var height: CGFloat = 50
-    var backgroundColor: Color = .black.opacity(0.5)
+    var backgroundColor: Color = .clear
     var cornerRadius: CGFloat = 10
-    var borderWidth: CGFloat = 2
+    var borderWidth: CGFloat = 1
     var shadowColor: Color = .clear
     var shadowRadius: CGFloat = 0
     var shadowXOffset: CGFloat = 0

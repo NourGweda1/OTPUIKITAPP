@@ -12,11 +12,25 @@ extension OTPMainView {
     func setUpData() {
         data = Array(repeating: "", count: textFieldCount)
         lastIndex = data.lastIndex(where: { !$0.isEmpty }) ?? 0
+//        if !mobileNumber.isEmpty {
+//            getOTPCode()
+//        }
+    }
+
+    private func getOTPCode() {
+        Task {
+            await otpHandler.sendOTP(mobileNumber: mobileNumber)
+        }
     }
 
     func handleOnBackAction(isEmpty: Bool, index: Int) {
-        if !isEmpty {
+        //trial
+        if (index == data.startIndex && data[index].isEmpty) || !isEmpty {
             data[index] = ""
+        } else {
+            if isEmpty {
+                data[index - 1] = ""
+            }
         }
         focusPreviousTextField(currentIndex: index)
     }
@@ -60,4 +74,9 @@ extension OTPMainView {
         }
     }
 
+    func handleReceivingVerficationCode() {
+        Task {
+          //  await otpHandler.verifyOTP()
+        }
+    }
 }

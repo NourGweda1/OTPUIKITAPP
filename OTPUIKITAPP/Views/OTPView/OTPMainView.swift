@@ -12,24 +12,31 @@ public struct OTPMainView: View {
     // MARK: - Data Variables
     internal var textFieldCount: Int
     @State internal var data: [String] = []
+    @State internal var mobileNumber: String
     @FocusState internal var focusedTextField: Int?
 
     // MARK: - Internal State Variables
     @State internal var lastIndex: Int = 0
-    
+    @State private var isViewAppeared: Bool = false
+
     // MARK: - Style Variables
     internal var customStyle: CustomStyle
-    
+
     // MARK: - Callback Closures
     internal var onChangeCallback: ((String) -> Void)?
     internal var onCompleteCallback: ((String) -> Void)
+
+    // MARK: - StateObjects Variables
+    @StateObject internal var otpHandler = OTPHandler()
         
         public init(textFieldCount: Int,
                     customStyle: CustomStyle,
+                    mobileNumber: String,
                     onChangeCallback: ((String) -> Void)? = nil,
                     onCompleteCallback: @escaping ((String) -> Void)) {
             self.textFieldCount = textFieldCount
             self.customStyle = customStyle
+            self.mobileNumber = mobileNumber
             self.onChangeCallback = onChangeCallback
             self.onCompleteCallback = onCompleteCallback
         }
@@ -52,7 +59,10 @@ public struct OTPMainView: View {
                 .customTextFieldModifier(customStyle: customStyle, index: index, focusedTextField: $focusedTextField)
             }
         } .onAppear {
-            setUpData()
+            if !isViewAppeared {
+                setUpData()
+                isViewAppeared.toggle()
+            }
         }
         .onTapGesture {
             focusedTextField = getFocusedTextField()
@@ -65,5 +75,6 @@ public struct OTPMainView: View {
             handleOnChangeFocus(newValue: newValue)
         }
     }
+    
 }
 

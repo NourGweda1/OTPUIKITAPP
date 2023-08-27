@@ -21,6 +21,10 @@
 		C7C8BD452A9223F300ADA2BD /* CustomStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8BD442A9223F300ADA2BD /* CustomStyle.swift */; };
 		C7C8BD472A9225EE00ADA2BD /* OTPMain+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8BD462A9225EE00ADA2BD /* OTPMain+Extension.swift */; };
 		C7C8BD492A92293900ADA2BD /* View+TFModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8BD482A92293900ADA2BD /* View+TFModifier.swift */; };
+		C7C8BD572A934B7600ADA2BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7C8BD562A934B7500ADA2BD /* GoogleService-Info.plist */; };
+		C7C8BD5B2A934DD800ADA2BD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C7C8BD5A2A934DD800ADA2BD /* FirebaseAuth */; };
+		C7C8BD5D2A934E6C00ADA2BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8BD5C2A934E6C00ADA2BD /* AppDelegate.swift */; };
+		C7C8BD602A934FD400ADA2BD /* OTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8BD5F2A934FD400ADA2BD /* OTPHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		C7C8BD442A9223F300ADA2BD /* CustomStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyle.swift; sourceTree = "<group>"; };
 		C7C8BD462A9225EE00ADA2BD /* OTPMain+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OTPMain+Extension.swift"; sourceTree = "<group>"; };
 		C7C8BD482A92293900ADA2BD /* View+TFModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+TFModifier.swift"; sourceTree = "<group>"; };
+		C7C8BD562A934B7500ADA2BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C7C8BD582A934C2000ADA2BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C7C8BD5C2A934E6C00ADA2BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7C8BD5F2A934FD400ADA2BD /* OTPHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C8BD5B2A934DD800ADA2BD /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +97,7 @@
 		C7C8BD022A9218E900ADA2BD = {
 			isa = PBXGroup;
 			children = (
+				C7C8BD562A934B7500ADA2BD /* GoogleService-Info.plist */,
 				C7C8BD0D2A9218E900ADA2BD /* OTPUIKITAPP */,
 				C7C8BD1E2A9218F200ADA2BD /* OTPUIKITAPPTests */,
 				C7C8BD282A9218F200ADA2BD /* OTPUIKITAPPUITests */,
@@ -108,12 +118,14 @@
 		C7C8BD0D2A9218E900ADA2BD /* OTPUIKITAPP */ = {
 			isa = PBXGroup;
 			children = (
+				C7C8BD582A934C2000ADA2BD /* Info.plist */,
 				C7C8BD402A92233600ADA2BD /* Views */,
 				C7C8BD382A92223000ADA2BD /* Helpers */,
 				C7C8BD0E2A9218E900ADA2BD /* OTPUIKITAPPApp.swift */,
 				C7C8BD102A9218E900ADA2BD /* ContentView.swift */,
 				C7C8BD122A9218F100ADA2BD /* Assets.xcassets */,
 				C7C8BD142A9218F100ADA2BD /* Preview Content */,
+				C7C8BD5C2A934E6C00ADA2BD /* AppDelegate.swift */,
 			);
 			path = OTPUIKITAPP;
 			sourceTree = "<group>";
@@ -165,8 +177,7 @@
 		C7C8BD402A92233600ADA2BD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C7C8BD412A92234A00ADA2BD /* OTPMainView.swift */,
-				C7C8BD462A9225EE00ADA2BD /* OTPMain+Extension.swift */,
+				C7C8BD5E2A934FBB00ADA2BD /* OTPView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +189,16 @@
 				C7C8BD482A92293900ADA2BD /* View+TFModifier.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C7C8BD5E2A934FBB00ADA2BD /* OTPView */ = {
+			isa = PBXGroup;
+			children = (
+				C7C8BD462A9225EE00ADA2BD /* OTPMain+Extension.swift */,
+				C7C8BD412A92234A00ADA2BD /* OTPMainView.swift */,
+				C7C8BD5F2A934FD400ADA2BD /* OTPHandler.swift */,
+			);
+			path = OTPView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +217,9 @@
 			dependencies = (
 			);
 			name = OTPUIKITAPP;
+			packageProductDependencies = (
+				C7C8BD5A2A934DD800ADA2BD /* FirebaseAuth */,
+			);
 			productName = OTPUIKITAPP;
 			productReference = C7C8BD0B2A9218E900ADA2BD /* OTPUIKITAPP.app */;
 			productType = "com.apple.product-type.application";
@@ -268,6 +292,9 @@
 				Base,
 			);
 			mainGroup = C7C8BD022A9218E900ADA2BD;
+			packageReferences = (
+				C7C8BD592A934DD800ADA2BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C7C8BD0C2A9218E900ADA2BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C8BD162A9218F100ADA2BD /* Preview Assets.xcassets in Resources */,
+				C7C8BD572A934B7600ADA2BD /* GoogleService-Info.plist in Resources */,
 				C7C8BD132A9218F100ADA2BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,11 +341,13 @@
 				C7C8BD112A9218E900ADA2BD /* ContentView.swift in Sources */,
 				C7C8BD3F2A92229000ADA2BD /* TextFieldCoordinator+Extension.swift in Sources */,
 				C7C8BD472A9225EE00ADA2BD /* OTPMain+Extension.swift in Sources */,
+				C7C8BD602A934FD400ADA2BD /* OTPHandler.swift in Sources */,
 				C7C8BD3A2A92224F00ADA2BD /* CustomUITextField.swift in Sources */,
 				C7C8BD492A92293900ADA2BD /* View+TFModifier.swift in Sources */,
 				C7C8BD3D2A92227B00ADA2BD /* TextFieldCoordinator.swift in Sources */,
 				C7C8BD0F2A9218E900ADA2BD /* OTPUIKITAPPApp.swift in Sources */,
 				C7C8BD452A9223F300ADA2BD /* CustomStyle.swift in Sources */,
+				C7C8BD5D2A934E6C00ADA2BD /* AppDelegate.swift in Sources */,
 				C7C8BD422A92234A00ADA2BD /* OTPMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -459,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -480,6 +510,7 @@
 				DEVELOPMENT_TEAM = X2UPT42H28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OTPUIKITAPP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -509,6 +540,7 @@
 				DEVELOPMENT_TEAM = X2UPT42H28;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OTPUIKITAPP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -643,6 +675,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7C8BD592A934DD800ADA2BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7C8BD5A2A934DD800ADA2BD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7C8BD592A934DD800ADA2BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C7C8BD032A9218E900ADA2BD /* Project object */;
 }
