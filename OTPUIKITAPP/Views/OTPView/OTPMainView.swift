@@ -26,6 +26,9 @@ public struct OTPMainView: View {
     internal var onChangeCallback: ((String) -> Void)?
     internal var onCompleteCallback: ((String) -> Void)
 
+    // MARK: - Binding Variables
+    @Binding var shouldDismissKeyboard: Bool
+
     // MARK: - StateObjects Variables
     @StateObject internal var otpHandler = OTPHandler()
         
@@ -33,12 +36,14 @@ public struct OTPMainView: View {
                     customStyle: CustomStyle,
                     mobileNumber: String,
                     onChangeCallback: ((String) -> Void)? = nil,
-                    onCompleteCallback: @escaping ((String) -> Void)) {
+                    onCompleteCallback: @escaping ((String) -> Void),
+                    shouldDismissKeyboard: Binding<Bool>) {
             self.textFieldCount = textFieldCount
             self.customStyle = customStyle
             self.mobileNumber = mobileNumber
             self.onChangeCallback = onChangeCallback
             self.onCompleteCallback = onCompleteCallback
+            _shouldDismissKeyboard = shouldDismissKeyboard
         }
     
     public var body: some View {
@@ -69,11 +74,30 @@ public struct OTPMainView: View {
         }
         .onTapGesture(count: 2) {
             focusedTextField = data.firstIndex(where: { $0.isEmpty }) ?? (data.count - 1)
-        }
+        }.onChange(of: shouldDismissKeyboard, perform: { newValue in
+            if newValue {
+                focusedTextField = nil
+            }
+        })
         .onChange(of: focusedTextField) { newValue in
             guard let newValue else { return }
             handleOnChangeFocus(newValue: newValue)
         }
+        //    .onChange(of: otpHandler.verificationCode) { _ in
+        //      handleReceivingVerficationCode()
+        //    }
+            .onChange(of: otpHandler.otpCode) { newValue in
+                if !newValue.isEmpty {
+                        data = Array(repeating: "", count: textFieldCount)
+                         for index in 0..<6 {
+                           for item in otpHandler.otpCode.enumerated() {
+                             data[item.offset] = String(item.element)
+                           }
+                         }
+              }
+            }.onChange(of: otpHandler.errorMsg) { newValue in
+                debugPrint(newValue, "🐞")
+            }
     }
     
 }

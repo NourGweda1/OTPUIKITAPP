@@ -12,9 +12,9 @@ extension OTPMainView {
     func setUpData() {
         data = Array(repeating: "", count: textFieldCount)
         lastIndex = data.lastIndex(where: { !$0.isEmpty }) ?? 0
-//        if !mobileNumber.isEmpty {
+        if !mobileNumber.isEmpty {
 //            getOTPCode()
-//        }
+        }
     }
 
     private func getOTPCode() {
@@ -47,7 +47,9 @@ extension OTPMainView {
         }
     }
 
-    private func focusNextTextField(currentIndex: Int) {
+    
+    // if finish trial change back to private <<<<< DONT FORGET TO RETURN PRIVATEEEE <<<<<<
+    func focusNextTextField(currentIndex: Int) {
         let nextIndex = min(currentIndex + 1, textFieldCount - 1)
         focusedTextField = nextIndex
     }
@@ -58,13 +60,22 @@ extension OTPMainView {
     }
 
     func getFocusedTextField() -> Int {
-        let isAllFilledExceptLast = data.dropLast().allSatisfy { !$0.isEmpty } && data.last?.isEmpty == true
+//        let isAllFilledExceptLast = data.dropLast().allSatisfy { !$0.isEmpty } && data.last?.isEmpty == true
+        let allDataIsFull = data.allSatisfy { !$0.isEmpty }
+        let allDataIsEmpty = data.allSatisfy { $0.isEmpty }
 
-        if isAllFilledExceptLast {
-            return lastIndex + 1
+        if allDataIsEmpty || allDataIsFull {
+            return lastIndex
         } else {
-           return lastIndex
+            return lastIndex + 1
         }
+        
+
+//        if isAllFilledExceptLast {
+//            return lastIndex + 1
+//        } else {
+//           return lastIndex
+//        }
     }
 
     func handleOnChangeFocus(newValue: Int) {
@@ -76,7 +87,7 @@ extension OTPMainView {
 
     func handleReceivingVerficationCode() {
         Task {
-          //  await otpHandler.verifyOTP()
+//            await otpHandler.verifyOTP()
         }
     }
 }

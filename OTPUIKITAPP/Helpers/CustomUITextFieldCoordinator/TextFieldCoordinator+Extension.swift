@@ -34,4 +34,14 @@ extension EnhancedTextFieldCoordinator: UITextFieldDelegate {
         let subArray = data.prefix(currentIndex.wrappedValue)
         return subArray.allSatisfy { !$0.wrappedValue.isEmpty }
     }
+
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        // This method is called when the user makes a selection or changes the text
+        if let selectedRange = textField.selectedTextRange {
+            let selectedText = textField.text(in: selectedRange)
+            print("Selected Text: \(selectedText ?? "")")
+            // You can check the selected text for specific keyboard suggestions
+            // and perform actions accordingly
+        }
+    }
 }

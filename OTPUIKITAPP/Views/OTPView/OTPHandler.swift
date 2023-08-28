@@ -44,8 +44,14 @@ extension OTPMainView {
         func verifyOTP() async {
             do {
                 self.isLoading = true
-                let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationCode, verificationCode: otpCode)
-                let _ = try await Auth.auth().signIn(with: credential)
+                let verCode = "123456"
+                let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationCode, verificationCode: verCode)
+                let result = try await Auth.auth().signIn(with: credential)
+                debugPrint("🐙🐙🐙🐙🐙🐙")
+                debugPrint(result.credential, "credential")
+                debugPrint(result.additionalUserInfo, "additionalUserInfo")
+                debugPrint(result.user, "user")
+                debugPrint("🐙🐙🐙🐙🐙🐙")
                 debugPrint(otpCode, "🐙")
                 DispatchQueue.main.async {
                     self.isLoading = false

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State var shouldDismissKeyboard: Bool = false
+
     var body: some View {
         VStack {
             OTPMainView(textFieldCount: 6,
@@ -20,7 +23,8 @@ struct ContentView: View {
                 debugPrint(newValue, "On Change Value")
             },          onCompleteCallback: { newValue in
                 debugPrint(newValue, "On Back Value")
-            })
+                shouldDismissKeyboard = true
+            },shouldDismissKeyboard: $shouldDismissKeyboard)
         }
         .padding()
     }
