@@ -63,9 +63,9 @@ extension OTPMainView {
 //        let isAllFilledExceptLast = data.dropLast().allSatisfy { !$0.isEmpty } && data.last?.isEmpty == true
         let allDataIsFull = data.allSatisfy { !$0.isEmpty }
         let allDataIsEmpty = data.allSatisfy { $0.isEmpty }
-
+        
         if allDataIsEmpty || allDataIsFull {
-            return lastIndex
+            return allDataIsEmpty ? 0 : lastIndex
         } else {
             return lastIndex + 1
         }

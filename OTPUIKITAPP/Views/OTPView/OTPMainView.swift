@@ -72,13 +72,19 @@ public struct OTPMainView: View {
         .onTapGesture {
             focusedTextField = getFocusedTextField()
         }
-        .onTapGesture(count: 2) {
-            focusedTextField = data.firstIndex(where: { $0.isEmpty }) ?? (data.count - 1)
-        }.onChange(of: shouldDismissKeyboard, perform: { newValue in
+//        .onTapGesture(count: 2) {
+//            focusedTextField = data.firstIndex(where: { $0.isEmpty }) ?? (data.count - 1)
+//        }
+        .onChange(of: shouldDismissKeyboard, perform: { newValue in
             if newValue {
                 focusedTextField = nil
             }
         })
+//        .onChange(of: data, perform: { newValue in
+//            if newValue.allSatisfy({ $0.isEmpty }) {
+//                lastIndex = 0
+//            }
+//        })
         .onChange(of: focusedTextField) { newValue in
             guard let newValue else { return }
             handleOnChangeFocus(newValue: newValue)

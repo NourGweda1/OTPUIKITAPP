@@ -22,4 +22,5 @@ public struct CustomStyle {
     var shadowRadius: CGFloat = 0
     var shadowXOffset: CGFloat = 0
     var shadowYOffset: CGFloat = 0
+    var isCursorHidden: Bool = false
 }

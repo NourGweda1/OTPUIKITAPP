@@ -39,65 +39,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3FEF44FF-8A15-4E0C-AB0C-725A1C4F81FB"
+            uuid = "AE170277-39F2-49EE-AA0F-2EC9B5EE730D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OTPUIKITAPP/Views/OTPView/OTPMainView.swift"
+            filePath = "OTPUIKITAPP/Views/OTPView/OTPMain+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "3FEF44FF-8A15-4E0C-AB0C-725A1C4F81FB - 67c32b2fb7e95269"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #4 () -&gt; () in OTPUIKITAPP.OTPMainView.body.getter : some"
-                  moduleName = "OTPUIKITAPP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/trianglz/Desktop/projects/OTPUIKITAPP/OTPUIKITAPP/Views/OTPView/OTPMainView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "3FEF44FF-8A15-4E0C-AB0C-725A1C4F81FB - bacf08e11fa20959"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String) -&gt; Swift.Bool in closure #4 () -&gt; () in OTPUIKITAPP.OTPMainView.body.getter : some"
-                  moduleName = "OTPUIKITAPP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/trianglz/Desktop/projects/OTPUIKITAPP/OTPUIKITAPP/Views/OTPView/OTPMainView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "getFocusedTextField()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FECEF096-4749-458B-8341-029AB3218866"
+            uuid = "FC514234-C5BD-4FE7-BE3B-8D802419EB25"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OTPUIKITAPP/Views/OTPView/OTPMainView.swift"
+            filePath = "OTPUIKITAPP/Views/OTPView/OTPMain+Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "getFocusedTextField()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
