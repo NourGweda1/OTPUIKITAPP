@@ -18,7 +18,7 @@ struct ContentView: View {
                                                  fontStyle: .systemFont(ofSize: 18),
                                                  hstackSpacing: 10,
                                                  borderColor: .blue),
-                        mobileNumber: "201201388540",
+                        mobileNumber: "201206425318",
                         onChangeCallback: { newValue in
                 debugPrint(newValue, "On Change Value")
             },          onCompleteCallback: { newValue in

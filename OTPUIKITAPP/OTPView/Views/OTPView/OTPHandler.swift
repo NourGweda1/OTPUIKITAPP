@@ -17,6 +17,20 @@ extension OTPMainView {
         @Published var showAlert: Bool = false
         @Published var isLoading: Bool = false
 
+        private var registrationUseCase = RegistrationUseCase(repo: RegistrationRepoImpl())
+
+        func register() async -> RegisterModel? {
+            let response = await registrationUseCase.register(phoneNum: "01201388540")
+            isLoading = false
+            switch response {
+            case .success(let successResponse):
+                return successResponse
+            case .failure(let error):
+                errorMsg = error.errorDescription
+            }
+            return nil
+        }
+
         func sendOTP(mobileNumber: String) async {
             do {
                 isLoading = true

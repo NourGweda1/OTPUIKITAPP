@@ -11,9 +11,19 @@ extension OTPMainView {
 
     func setUpData() {
         data = Array(repeating: "", count: textFieldCount)
+        internalData = Array(repeating: "", count: textFieldCount)
         lastIndex = data.lastIndex(where: { !$0.isEmpty }) ?? 0
+
         if !mobileNumber.isEmpty {
-//            getOTPCode()
+          //  getOTPCode()
+            register()
+        }
+    }
+
+    private func register() {
+        Task {
+          let response = await otpHandler.register()
+            debugPrint(response?.message ?? "", "🐙")
         }
     }
 
@@ -60,22 +70,17 @@ extension OTPMainView {
     }
 
     func getFocusedTextField() -> Int {
-//        let isAllFilledExceptLast = data.dropLast().allSatisfy { !$0.isEmpty } && data.last?.isEmpty == true
-        let allDataIsFull = data.allSatisfy { !$0.isEmpty }
         let allDataIsEmpty = data.allSatisfy { $0.isEmpty }
         
-        if allDataIsEmpty || allDataIsFull {
+        if allDataIsEmpty || isAllDataFull() {
             return allDataIsEmpty ? 0 : lastIndex
         } else {
             return lastIndex + 1
         }
-        
+    }
 
-//        if isAllFilledExceptLast {
-//            return lastIndex + 1
-//        } else {
-//           return lastIndex
-//        }
+    func isAllDataFull() -> Bool {
+        return data.allSatisfy { !$0.isEmpty }
     }
 
     func handleOnChangeFocus(newValue: Int) {
@@ -84,6 +89,8 @@ extension OTPMainView {
             focusedTextField = lastIndex
         }
     }
+
+
 
     func handleReceivingVerficationCode() {
         Task {

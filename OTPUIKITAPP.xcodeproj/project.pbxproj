@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C73C45F62A9DDEB800B34E4C /* TrialKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C45F52A9DDEB800B34E4C /* TrialKeyboardView.swift */; };
+		C74BE96F2A9F21E400906AF6 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BE96E2A9F21E400906AF6 /* AuthProvider.swift */; };
+		C74BE9712A9F238000906AF6 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BE9702A9F238000906AF6 /* RegisterModel.swift */; };
+		C74BE9732A9F24ED00906AF6 /* RegistrationImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BE9722A9F24ED00906AF6 /* RegistrationImpl.swift */; };
+		C74BE9782A9F252F00906AF6 /* RegistrationRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BE9772A9F252F00906AF6 /* RegistrationRepo.swift */; };
+		C74BE97A2A9F260200906AF6 /* RegistrationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74BE9792A9F260200906AF6 /* RegistrationUseCase.swift */; };
+		C78C921E2A9F16D0008916C1 /* ApiErrorsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C92112A9F16D0008916C1 /* ApiErrorsEnum.swift */; };
+		C78C921F2A9F16D0008916C1 /* HttpMethodsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C92122A9F16D0008916C1 /* HttpMethodsEnum.swift */; };
+		C78C92202A9F16D0008916C1 /* ParametersTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C92132A9F16D0008916C1 /* ParametersTypeEnum.swift */; };
+		C78C92212A9F16D0008916C1 /* MainResonseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C92152A9F16D0008916C1 /* MainResonseModel.swift */; };
+		C78C92222A9F16D0008916C1 /* URLRequestExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C92172A9F16D0008916C1 /* URLRequestExtension.swift */; };
+		C78C92232A9F16D0008916C1 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C92182A9F16D0008916C1 /* DictionaryExtension.swift */; };
+		C78C92242A9F16D0008916C1 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C92192A9F16D0008916C1 /* NetworkHandler.swift */; };
+		C78C92252A9F16D0008916C1 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C921A2A9F16D0008916C1 /* NetworkReachability.swift */; };
+		C78C92262A9F16D0008916C1 /* NetworkApisProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C921C2A9F16D0008916C1 /* NetworkApisProtocol.swift */; };
+		C78C92272A9F16D0008916C1 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C921D2A9F16D0008916C1 /* NetworkClient.swift */; };
+		C78C922A2A9F193B008916C1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C78C92292A9F193B008916C1 /* Alamofire */; };
+		C78C922D2A9F1A0A008916C1 /* View+URLEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C922C2A9F1A0A008916C1 /* View+URLEncoded.swift */; };
+		C78C92302A9F1A7B008916C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C922F2A9F1A7B008916C1 /* Constants.swift */; };
+		C78C92322A9F1A96008916C1 /* Constants+APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78C92312A9F1A96008916C1 /* Constants+APIErrors.swift */; };
 		C7C8BD0F2A9218E900ADA2BD /* OTPUIKITAPPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8BD0E2A9218E900ADA2BD /* OTPUIKITAPPApp.swift */; };
 		C7C8BD112A9218E900ADA2BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C8BD102A9218E900ADA2BD /* ContentView.swift */; };
 		C7C8BD132A9218F100ADA2BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C8BD122A9218F100ADA2BD /* Assets.xcassets */; };
@@ -45,6 +65,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C73C45F52A9DDEB800B34E4C /* TrialKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialKeyboardView.swift; sourceTree = "<group>"; };
+		C74BE96E2A9F21E400906AF6 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		C74BE9702A9F238000906AF6 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		C74BE9722A9F24ED00906AF6 /* RegistrationImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationImpl.swift; sourceTree = "<group>"; };
+		C74BE9772A9F252F00906AF6 /* RegistrationRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRepo.swift; sourceTree = "<group>"; };
+		C74BE9792A9F260200906AF6 /* RegistrationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUseCase.swift; sourceTree = "<group>"; };
+		C78C92112A9F16D0008916C1 /* ApiErrorsEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiErrorsEnum.swift; sourceTree = "<group>"; };
+		C78C92122A9F16D0008916C1 /* HttpMethodsEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethodsEnum.swift; sourceTree = "<group>"; };
+		C78C92132A9F16D0008916C1 /* ParametersTypeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParametersTypeEnum.swift; sourceTree = "<group>"; };
+		C78C92152A9F16D0008916C1 /* MainResonseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainResonseModel.swift; sourceTree = "<group>"; };
+		C78C92172A9F16D0008916C1 /* URLRequestExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestExtension.swift; sourceTree = "<group>"; };
+		C78C92182A9F16D0008916C1 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		C78C92192A9F16D0008916C1 /* NetworkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		C78C921A2A9F16D0008916C1 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		C78C921C2A9F16D0008916C1 /* NetworkApisProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkApisProtocol.swift; sourceTree = "<group>"; };
+		C78C921D2A9F16D0008916C1 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = OTPUIKITAPP/NetworkClient.swift; sourceTree = SOURCE_ROOT; };
+		C78C922C2A9F1A0A008916C1 /* View+URLEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+URLEncoded.swift"; sourceTree = "<group>"; };
+		C78C922F2A9F1A7B008916C1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C78C92312A9F1A96008916C1 /* Constants+APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+APIErrors.swift"; sourceTree = "<group>"; };
 		C7C8BD0B2A9218E900ADA2BD /* OTPUIKITAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTPUIKITAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C8BD0E2A9218E900ADA2BD /* OTPUIKITAPPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPUIKITAPPApp.swift; sourceTree = "<group>"; };
 		C7C8BD102A9218E900ADA2BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78C922A2A9F193B008916C1 /* Alamofire in Frameworks */,
 				C7C8BD5B2A934DD800ADA2BD /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +134,150 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C74BE9692A9F217E00906AF6 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C74BE96D2A9F21A700906AF6 /* Repo */,
+				C74BE96C2A9F219E00906AF6 /* Models */,
+				C74BE96A2A9F218E00906AF6 /* DataSource */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		C74BE96A2A9F218E00906AF6 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				C74BE96E2A9F21E400906AF6 /* AuthProvider.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		C74BE96C2A9F219E00906AF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C74BE9702A9F238000906AF6 /* RegisterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C74BE96D2A9F21A700906AF6 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				C74BE9722A9F24ED00906AF6 /* RegistrationImpl.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		C74BE9742A9F250D00906AF6 /* DomaineLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C74BE9762A9F251C00906AF6 /* RepoProtocol */,
+				C74BE9752A9F251600906AF6 /* UseCases */,
+			);
+			path = DomaineLayer;
+			sourceTree = "<group>";
+		};
+		C74BE9752A9F251600906AF6 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				C74BE9792A9F260200906AF6 /* RegistrationUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		C74BE9762A9F251C00906AF6 /* RepoProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				C74BE9772A9F252F00906AF6 /* RegistrationRepo.swift */,
+			);
+			path = RepoProtocol;
+			sourceTree = "<group>";
+		};
+		C74BE97B2A9F269000906AF6 /* OTPView */ = {
+			isa = PBXGroup;
+			children = (
+				C7C8BD402A92233600ADA2BD /* Views */,
+				C74BE9692A9F217E00906AF6 /* DataLayer */,
+				C74BE9742A9F250D00906AF6 /* DomaineLayer */,
+			);
+			path = OTPView;
+			sourceTree = "<group>";
+		};
+		C78C920E2A9F16B8008916C1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C78C920F2A9F16D0008916C1 /* MainFiles */,
+				C78C921D2A9F16D0008916C1 /* NetworkClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C78C920F2A9F16D0008916C1 /* MainFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C78C92102A9F16D0008916C1 /* Enums */,
+				C78C92142A9F16D0008916C1 /* Models */,
+				C78C92162A9F16D0008916C1 /* Extensions */,
+				C78C92192A9F16D0008916C1 /* NetworkHandler.swift */,
+				C78C921A2A9F16D0008916C1 /* NetworkReachability.swift */,
+				C78C921B2A9F16D0008916C1 /* Protocols */,
+			);
+			name = MainFiles;
+			path = OTPUIKITAPP/MainFiles;
+			sourceTree = SOURCE_ROOT;
+		};
+		C78C92102A9F16D0008916C1 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				C78C92112A9F16D0008916C1 /* ApiErrorsEnum.swift */,
+				C78C92122A9F16D0008916C1 /* HttpMethodsEnum.swift */,
+				C78C92132A9F16D0008916C1 /* ParametersTypeEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		C78C92142A9F16D0008916C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C78C92152A9F16D0008916C1 /* MainResonseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C78C92162A9F16D0008916C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C78C92172A9F16D0008916C1 /* URLRequestExtension.swift */,
+				C78C92182A9F16D0008916C1 /* DictionaryExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C78C921B2A9F16D0008916C1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C78C921C2A9F16D0008916C1 /* NetworkApisProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C78C922B2A9F19F2008916C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C78C922C2A9F1A0A008916C1 /* View+URLEncoded.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C78C922E2A9F1A6A008916C1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C78C922F2A9F1A7B008916C1 /* Constants.swift */,
+				C78C92312A9F1A96008916C1 /* Constants+APIErrors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		C7C8BD022A9218E900ADA2BD = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +302,10 @@
 		C7C8BD0D2A9218E900ADA2BD /* OTPUIKITAPP */ = {
 			isa = PBXGroup;
 			children = (
+				C74BE97B2A9F269000906AF6 /* OTPView */,
+				C78C922B2A9F19F2008916C1 /* Extensions */,
+				C78C920E2A9F16B8008916C1 /* Networking */,
 				C7C8BD582A934C2000ADA2BD /* Info.plist */,
-				C7C8BD402A92233600ADA2BD /* Views */,
 				C7C8BD382A92223000ADA2BD /* Helpers */,
 				C7C8BD0E2A9218E900ADA2BD /* OTPUIKITAPPApp.swift */,
 				C7C8BD102A9218E900ADA2BD /* ContentView.swift */,
@@ -158,6 +344,7 @@
 		C7C8BD382A92223000ADA2BD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C78C922E2A9F1A6A008916C1 /* Constants */,
 				C7C8BD432A9223B700ADA2BD /* Views */,
 				C7C8BD3B2A92226000ADA2BD /* CustomUITextFieldCoordinator */,
 				C7C8BD392A92224F00ADA2BD /* CustomUITextField.swift */,
@@ -197,6 +384,7 @@
 				C7C8BD462A9225EE00ADA2BD /* OTPMain+Extension.swift */,
 				C7C8BD412A92234A00ADA2BD /* OTPMainView.swift */,
 				C7C8BD5F2A934FD400ADA2BD /* OTPHandler.swift */,
+				C73C45F52A9DDEB800B34E4C /* TrialKeyboardView.swift */,
 			);
 			path = OTPView;
 			sourceTree = "<group>";
@@ -219,6 +407,7 @@
 			name = OTPUIKITAPP;
 			packageProductDependencies = (
 				C7C8BD5A2A934DD800ADA2BD /* FirebaseAuth */,
+				C78C92292A9F193B008916C1 /* Alamofire */,
 			);
 			productName = OTPUIKITAPP;
 			productReference = C7C8BD0B2A9218E900ADA2BD /* OTPUIKITAPP.app */;
@@ -294,6 +483,7 @@
 			mainGroup = C7C8BD022A9218E900ADA2BD;
 			packageReferences = (
 				C7C8BD592A934DD800ADA2BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C78C92282A9F193A008916C1 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = C7C8BD0C2A9218E900ADA2BD /* Products */;
 			projectDirPath = "";
@@ -339,16 +529,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C8BD112A9218E900ADA2BD /* ContentView.swift in Sources */,
+				C78C921E2A9F16D0008916C1 /* ApiErrorsEnum.swift in Sources */,
 				C7C8BD3F2A92229000ADA2BD /* TextFieldCoordinator+Extension.swift in Sources */,
+				C78C92272A9F16D0008916C1 /* NetworkClient.swift in Sources */,
 				C7C8BD472A9225EE00ADA2BD /* OTPMain+Extension.swift in Sources */,
 				C7C8BD602A934FD400ADA2BD /* OTPHandler.swift in Sources */,
+				C78C92222A9F16D0008916C1 /* URLRequestExtension.swift in Sources */,
 				C7C8BD3A2A92224F00ADA2BD /* CustomUITextField.swift in Sources */,
+				C78C92212A9F16D0008916C1 /* MainResonseModel.swift in Sources */,
 				C7C8BD492A92293900ADA2BD /* View+TFModifier.swift in Sources */,
+				C78C92232A9F16D0008916C1 /* DictionaryExtension.swift in Sources */,
 				C7C8BD3D2A92227B00ADA2BD /* TextFieldCoordinator.swift in Sources */,
+				C78C92262A9F16D0008916C1 /* NetworkApisProtocol.swift in Sources */,
+				C78C92322A9F1A96008916C1 /* Constants+APIErrors.swift in Sources */,
+				C74BE9732A9F24ED00906AF6 /* RegistrationImpl.swift in Sources */,
 				C7C8BD0F2A9218E900ADA2BD /* OTPUIKITAPPApp.swift in Sources */,
+				C78C922D2A9F1A0A008916C1 /* View+URLEncoded.swift in Sources */,
+				C78C92202A9F16D0008916C1 /* ParametersTypeEnum.swift in Sources */,
+				C74BE9712A9F238000906AF6 /* RegisterModel.swift in Sources */,
+				C78C921F2A9F16D0008916C1 /* HttpMethodsEnum.swift in Sources */,
+				C74BE96F2A9F21E400906AF6 /* AuthProvider.swift in Sources */,
 				C7C8BD452A9223F300ADA2BD /* CustomStyle.swift in Sources */,
 				C7C8BD5D2A934E6C00ADA2BD /* AppDelegate.swift in Sources */,
+				C74BE9782A9F252F00906AF6 /* RegistrationRepo.swift in Sources */,
+				C73C45F62A9DDEB800B34E4C /* TrialKeyboardView.swift in Sources */,
 				C7C8BD422A92234A00ADA2BD /* OTPMainView.swift in Sources */,
+				C78C92242A9F16D0008916C1 /* NetworkHandler.swift in Sources */,
+				C78C92252A9F16D0008916C1 /* NetworkReachability.swift in Sources */,
+				C74BE97A2A9F260200906AF6 /* RegistrationUseCase.swift in Sources */,
+				C78C92302A9F1A7B008916C1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +713,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OTPUIKITAPP/Preview Content\"";
@@ -523,6 +733,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OTPUIKIT.OTPUIKITAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -534,6 +745,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OTPUIKITAPP/Preview Content\"";
@@ -553,6 +765,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = OTPUIKIT.OTPUIKITAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -677,6 +890,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C78C92282A9F193A008916C1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		C7C8BD592A934DD800ADA2BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -688,6 +909,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C78C92292A9F193B008916C1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C78C92282A9F193A008916C1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		C7C8BD5A2A934DD800ADA2BD /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C7C8BD592A934DD800ADA2BD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

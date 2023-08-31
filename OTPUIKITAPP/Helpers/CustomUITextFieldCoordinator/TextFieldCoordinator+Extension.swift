@@ -9,11 +9,25 @@ import Foundation
 import SwiftUI
 
 extension EnhancedTextFieldCoordinator: UITextFieldDelegate {
+    
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
         let newText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
-        
+
+        setUserDefaultsData(newText: newText)
+        if let savedArray = UserDefaults.standard.stringArray(forKey: "DataInternal") {
+            if getNonEmptyCount(array: savedArray) == data.count {
+                debugPrint("Saved Array: \(savedArray)")
+                data.wrappedValue = savedArray
+                let emptyArray: [String] = []
+                UserDefaults.standard.set(emptyArray, forKey: "DataInternal")
+                return true
+            }
+        } else {
+            debugPrint("Array not found in UserDefaults.")
+        }
+
         if !newText.isEmpty && (newText.count == 1) && areElementsNotEmpty() {
             textBinding.wrappedValue = String(newText.prefix(1))
             onChange?(newText)
@@ -35,13 +49,24 @@ extension EnhancedTextFieldCoordinator: UITextFieldDelegate {
         return subArray.allSatisfy { !$0.wrappedValue.isEmpty }
     }
 
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        // This method is called when the user makes a selection or changes the text
-        if let selectedRange = textField.selectedTextRange {
-            let selectedText = textField.text(in: selectedRange)
-            print("Selected Text: \(selectedText ?? "")")
-            // You can check the selected text for specific keyboard suggestions
-            // and perform actions accordingly
+    func setUserDefaultsData(newText: String) {
+        var stringArray = UserDefaults.standard.stringArray(forKey: "DataInternal") ?? []
+
+        if newText.count == 1 {
+            stringArray.append(String(newText))
+            stringArray.removeAll { $0.isEmpty }
+
+            UserDefaults.standard.set(stringArray, forKey: "DataInternal")
         }
+    }
+    
+    func getNonEmptyCount(array: [String]) -> Int {
+        var nonEmptyCount = 0
+        for item in array {
+            if !item.isEmpty {
+                nonEmptyCount += 1
+            }
+        }
+        return nonEmptyCount
     }
 }
